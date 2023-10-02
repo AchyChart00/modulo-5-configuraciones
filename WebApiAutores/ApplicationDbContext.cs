@@ -10,8 +10,8 @@ namespace WebApiAutores
         {
 
         }
-        //de esta forma generamos las tablas
+        //de esta forma generamos las tablas, apartir del esquema de la clase
         public DbSet<Autor> Autores { get; set; }
-        
+        public DbSet<Libro> Libros { get; set; }
     }
 }
