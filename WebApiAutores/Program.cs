@@ -14,7 +14,9 @@ namespace WebApiAutores
 
             var app = builder.Build();
 
-            startup.Configure(app, app.Environment);
+            var servicioLogger = (ILogger<Startup>) app.Services.GetService(typeof(ILogger<Startup>));
+            
+            startup.Configure(app, app.Environment, servicioLogger);
 
             app.Run();
         }
