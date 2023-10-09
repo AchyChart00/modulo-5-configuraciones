@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebApiAutores.Entidades;
+using WebApiAutores.Servicios;
 
 namespace WebApiAutores.Controllers
 {
@@ -10,12 +11,38 @@ namespace WebApiAutores.Controllers
     public class AutoresController : ControllerBase
     {
         private readonly ApplicationDbContext context;
+        private readonly ServicioTransient _servicioTransient;
+        private readonly ServicioScoped _servicioScoped;
+        private readonly ServicioSingleton _servicioSingleton;
+        private readonly IServicio _servicio;
 
-        public AutoresController(ApplicationDbContext context) 
+        public AutoresController(ApplicationDbContext context, 
+            ServicioTransient servicioTransient, 
+            ServicioScoped servicioScoped, 
+            ServicioSingleton servicioSingleton, 
+            IServicio servicio) 
         {
             this.context = context;
+            _servicioTransient = servicioTransient;
+            _servicioScoped = servicioScoped;
+            _servicioSingleton = servicioSingleton;
+            _servicio = servicio;
         }
 
+        [HttpGet("GUID")]
+        public ActionResult ObtenerGuids()
+        {
+            return Ok( new
+            {
+                AutoresControllerTransient = _servicioTransient.Guid,
+                Servicio_Transient = _servicio.ObtenerTransient(),
+                AutoresControllerScoped = _servicioScoped.Guid,
+                Servicio_Scoped = _servicio.ObtenerScoped(),
+                AutoresControllerSingleton = _servicioSingleton.Guid,
+                Servicio_Singleton = _servicio.ObtenerSingleton(),
+            });
+        }
+        
         [HttpGet]// api/autores
         [HttpGet("listado")]// api/autores/listado
         [HttpGet("/listado")] //listado
