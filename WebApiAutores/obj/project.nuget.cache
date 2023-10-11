@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6W5tnVYbb/kSe4NmkI2gV+IlPu5SHhfeBCbh4p9FbBKWmHRyBsY7nqSwEibKhjODB/0vh2Pe+o2pcHvzjzufpg==",
+  "dgSpecHash": "9RPI3m7eholKxE0W9j6wFwg9iG3eFI7k4/Mx9Y2HMl8P3mINlzlW9dW3+5ySB9CgMKxDfGfc5TKmGjpdc1hqdQ==",
   "success": true,
   "projectFilePath": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/WebApiAutores/WebApiAutores/WebApiAutores.csproj",
   "expectedPackageFiles": [
     "/Users/jacobsanchez/.nuget/packages/azure.core/1.24.0/azure.core.1.24.0.nupkg.sha512",
     "/Users/jacobsanchez/.nuget/packages/azure.identity/1.6.0/azure.identity.1.6.0.nupkg.sha512",
     "/Users/jacobsanchez/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
+    "/Users/jacobsanchez/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/6.0.23/microsoft.aspnetcore.authentication.jwtbearer.6.0.23.nupkg.sha512",
     "/Users/jacobsanchez/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/jacobsanchez/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
     "/Users/jacobsanchez/.nuget/packages/microsoft.data.sqlclient/5.0.2/microsoft.data.sqlclient.5.0.2.nupkg.sha512",

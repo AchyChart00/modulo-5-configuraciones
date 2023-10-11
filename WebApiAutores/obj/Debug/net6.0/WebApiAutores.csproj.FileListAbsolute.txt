@@ -172,3 +172,4 @@ E:/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/WebApiAutores/WebApiAutores/bi
 /Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/WebApiAutores/WebApiAutores/obj/Debug/net6.0/WebApiAutores.pdb
 /Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/WebApiAutores/WebApiAutores/obj/Debug/net6.0/WebApiAutores.genruntimeconfig.cache
 /Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/WebApiAutores/WebApiAutores/obj/Debug/net6.0/ref/WebApiAutores.dll
+/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/WebApiAutores/WebApiAutores/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll

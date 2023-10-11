@@ -1,7 +1,10 @@
 ﻿using System.Text.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using WebApiAutores.Controllers;
+using WebApiAutores.Middlewares;
 using WebApiAutores.Servicios;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using WebApiAutores.Filtros;
 
 namespace WebApiAutores
 {
@@ -18,7 +21,10 @@ namespace WebApiAutores
         {
             
             // Add services to the container.
-            services.AddControllers()
+            services.AddControllers(opciones =>
+                {
+                    opciones.Filters.Add(typeof(FiltroDeExcepcion));
+                })
                 .AddJsonOptions(
                     x=> x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
                     );
@@ -32,6 +38,11 @@ namespace WebApiAutores
             services.AddTransient<ServicioTransient>();
             services.AddScoped<ServicioScoped>();
             services.AddSingleton<ServicioSingleton>();
+            services.AddTransient<MiFiltroDeAccion>();
+            
+            services.AddResponseCaching();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer();
             
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
@@ -40,9 +51,15 @@ namespace WebApiAutores
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILogger<Startup> logger)
         {
-            app.Use(async (contexto, siguiente) =>
-            {
-                using (var ms = new MemoryStream())
+            //esconder la clase de middleware
+            app.UseLoguearRespuestaHTTP();
+            
+            //app.UseMiddleware<LoguearRespuestaMiddleware>();
+            
+            //Middleware en la Clase StartUp
+            //app.Use(async (contexto, siguiente) =>
+            //{
+                /*using (var ms = new MemoryStream())
                 {
                     var cuerpoOriginalRespuesta = contexto.Response.Body;
                     contexto.Response.Body = ms;
@@ -59,8 +76,8 @@ namespace WebApiAutores
                     
                     logger.LogInformation(respuesta);
                     
-                }
-            });
+                }*/
+            //});
             
             //bifurcación de nuestra tubería de procesos, 
             //Nos permite asignar una ruta específica para el middleware. 
@@ -87,7 +104,9 @@ namespace WebApiAutores
 
             app.UseHttpsRedirection();
 
-            app.UseRouting();   
+            app.UseRouting();
+
+            app.UseResponseCaching();
 
             app.UseAuthorization();
 
