@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "BAcxAY/vHzuCAo0Z52D/7vP/wgTVxc3eMGwTQiWgTZE=",
+  "Hash": "t58llFWyL7qCQL9p8HCW1Kz4kCQME7/M0yKAJEBB3lA=",
   "Source": "WebApiAutores",
   "BasePath": "_content/WebApiAutores",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "WebApiAutores\\wwwroot",
+      "Source": "WebApiAutores",
+      "ContentRoot": "C:\\Users\\jacob.sanchez\\Documents\\Practicas\\web-api-autores\\WebApiAutores\\wwwroot\\",
+      "BasePath": "_content/WebApiAutores",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\jacob.sanchez\\Documents\\Practicas\\web-api-autores\\WebApiAutores\\wwwroot\\Archivo 1.text",
+      "SourceId": "WebApiAutores",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jacob.sanchez\\Documents\\Practicas\\web-api-autores\\WebApiAutores\\wwwroot\\",
+      "BasePath": "_content/WebApiAutores",
+      "RelativePath": "Archivo 1.text",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Archivo 1.text"
+    }
+  ]
 }
