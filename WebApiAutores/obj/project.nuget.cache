@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ZywDet4KVdUwelfhhUEM6EHntg+t52SXUJKp21yipa0rgcftS/4MQ5hPQZouKhVO4Z759J21lJemjktLqLlxUg==",
+  "dgSpecHash": "X//LaF5/eg0Nxyt0bkQ0rLBOdAJED9I4GlrsUFfcq+yAFVZbHZc1bzqAbrbBmveBRymvbsyYHgx75+NAH4fuDQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\jacob.sanchez\\Documents\\Practicas\\web-api-autores\\WebApiAutores\\WebApiAutores.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,7 @@
     "C:\\Users\\jacob.sanchez\\.nuget\\packages\\microsoft.entityframeworkcore.design\\7.0.11\\microsoft.entityframeworkcore.design.7.0.11.nupkg.sha512",
     "C:\\Users\\jacob.sanchez\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.11\\microsoft.entityframeworkcore.relational.7.0.11.nupkg.sha512",
     "C:\\Users\\jacob.sanchez\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\7.0.9\\microsoft.entityframeworkcore.sqlserver.7.0.9.nupkg.sha512",
-    "C:\\Users\\jacob.sanchez\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.9\\microsoft.entityframeworkcore.tools.7.0.9.nupkg.sha512",
+    "C:\\Users\\jacob.sanchez\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.11\\microsoft.entityframeworkcore.tools.7.0.11.nupkg.sha512",
     "C:\\Users\\jacob.sanchez\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\jacob.sanchez\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\jacob.sanchez\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
