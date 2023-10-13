@@ -1,6 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApiAutores.DTOs;
 using WebApiAutores.Entidades;
 using WebApiAutores.Filtros;
 
@@ -11,10 +13,12 @@ namespace WebApiAutores.Controllers
     public class AutoresController : ControllerBase
     {
         private readonly ApplicationDbContext context;
+        private readonly IMapper _mapper;
 
-        public AutoresController(ApplicationDbContext context) 
+        public AutoresController(ApplicationDbContext context, IMapper mapper)
         {
             this.context = context;
+            _mapper = mapper;
         }
         
         [HttpGet]// api/autores
@@ -48,16 +52,21 @@ namespace WebApiAutores.Controllers
         }
         
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody]Autor autor)
+        public async Task<ActionResult> Post([FromBody]AutorCreacionDTO autorCreacionDto)
         {
             //validación personalizada en el método de nuestro controlador
-            var existeAutorConElMismoNombre = await context.Autores.AnyAsync(x=> x.Nombre == autor.Nombre);
+            var existeAutorConElMismoNombre = await context.Autores.AnyAsync(x=> x.Nombre == autorCreacionDto.Nombre);
 
             if (existeAutorConElMismoNombre)
             {
-                return BadRequest($"Ya existe un autor con el nombre {autor.Nombre}");
+                return BadRequest($"Ya existe un autor con el nombre {autorCreacionDto.Nombre}");
             }
-            
+
+            // var autor = new Autor()
+            // {
+            //     Nombre = autorCreacionDto.Nombre
+            // };
+            var autor = _mapper.Map<Autor>(autorCreacionDto);
             context.Add(autor);
             //Para guardar los cambios de manera asincrona
             await context.SaveChangesAsync();
