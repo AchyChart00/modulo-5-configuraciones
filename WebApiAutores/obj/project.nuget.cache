@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tgcYP7KyTNoLD3iEdwB2Z4pCCqa10s5SODHfmbHF2/guvDyhUYSUJ63iV0O3TeEIBBxVBU//olSl/G0qF3kHZg==",
+  "dgSpecHash": "kARjbojNitAqpiqxUNg8bxUne2Uo7vVehcfdn1DbE53QxrBxe5A+NR5B/RKI7hMMee1DlHMCnpd8y9XXV/P9GQ==",
   "success": true,
-  "projectFilePath": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/ApiAutoresModulo5/WebApiAutores/WebApiAutores.csproj",
+  "projectFilePath": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/modulo-5-web-api-autores-/WebApiAutores/WebApiAutores.csproj",
   "expectedPackageFiles": [
     "/Users/jacobsanchez/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/jacobsanchez/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

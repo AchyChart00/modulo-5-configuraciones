@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "KuyZt4HgRfu5ac2XeSJL0GzjG2k0hTQ/sgOuk48bj8M=",
+  "Hash": "rPJv11pLhRwpb9WLN3e196D86KSCbtGHtItXM7r9Mgc=",
   "Source": "WebApiAutores",
   "BasePath": "_content/WebApiAutores",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "WebApiAutores/wwwroot",
       "Source": "WebApiAutores",
-      "ContentRoot": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/ApiAutoresModulo5/WebApiAutores/wwwroot/",
+      "ContentRoot": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/modulo-5-web-api-autores-/WebApiAutores/wwwroot/",
       "BasePath": "_content/WebApiAutores",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/ApiAutoresModulo5/WebApiAutores/wwwroot/Archivo 1.text",
+      "Identity": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/modulo-5-web-api-autores-/WebApiAutores/wwwroot/Archivo 1.text",
       "SourceId": "WebApiAutores",
       "SourceType": "Discovered",
-      "ContentRoot": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/ApiAutoresModulo5/WebApiAutores/wwwroot/",
+      "ContentRoot": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/modulo-5-web-api-autores-/WebApiAutores/wwwroot/",
       "BasePath": "_content/WebApiAutores",
       "RelativePath": "Archivo 1.text",
       "AssetKind": "All",

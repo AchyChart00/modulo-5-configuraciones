@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/ApiAutoresModulo5/WebApiAutores/WebApiAutores.csproj": {}
+    "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/modulo-5-web-api-autores-/WebApiAutores/WebApiAutores.csproj": {}
   },
   "projects": {
-    "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/ApiAutoresModulo5/WebApiAutores/WebApiAutores.csproj": {
+    "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/modulo-5-web-api-autores-/WebApiAutores/WebApiAutores.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/ApiAutoresModulo5/WebApiAutores/WebApiAutores.csproj",
+        "projectUniqueName": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/modulo-5-web-api-autores-/WebApiAutores/WebApiAutores.csproj",
         "projectName": "WebApiAutores",
-        "projectPath": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/ApiAutoresModulo5/WebApiAutores/WebApiAutores.csproj",
+        "projectPath": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/modulo-5-web-api-autores-/WebApiAutores/WebApiAutores.csproj",
         "packagesPath": "/Users/jacobsanchez/.nuget/packages/",
-        "outputPath": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/ApiAutoresModulo5/WebApiAutores/obj/",
+        "outputPath": "/Users/jacobsanchez/Documents/ProgrammingProjects/FullStack/CSharp/CShapCurso/CursoAPIRestASPNET/modulo-5-web-api-autores-/WebApiAutores/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/jacobsanchez/.nuget/NuGet/NuGet.Config"
