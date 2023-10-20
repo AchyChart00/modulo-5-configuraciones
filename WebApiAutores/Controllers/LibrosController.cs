@@ -19,7 +19,7 @@ namespace WebApiAutores.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "ObtenerLibro")]
         public async Task<ActionResult<LibroDTOConAutores>> Get(int id)
         {
             var libros =  await context.Libros.Include(libroBD=>libroBD.Comentarios)
@@ -60,7 +60,9 @@ namespace WebApiAutores.Controllers
             }
             context.Add(libro);
             await context.SaveChangesAsync();
-            return Ok();
+
+            var libroDTO = _mapper.Map<LibroDTO>(libro);
+            return CreatedAtRoute("ObtenerLibro", new {id=libro.Id}, libroDTO);
 
         }
     }

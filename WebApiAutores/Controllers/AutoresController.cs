@@ -28,7 +28,7 @@ namespace WebApiAutores.Controllers
             return _mapper.Map<List<AutorDTO>>(autores);
         }
 
-        [HttpGet("{id:int}")]
+        [HttpGet("{id:int}", Name = "ObtenerAutor")]
         public async Task<ActionResult<AutorDTOConLibros>> Get(int id)
         {
             var autor =  await context.Autores
@@ -62,28 +62,32 @@ namespace WebApiAutores.Controllers
                 return BadRequest($"Ya existe un autor con el nombre {autorCreacionDto.Nombre}");
             }
 
-            // var autor = new Autor()
-            // {
-            //     Nombre = autorCreacionDto.Nombre
-            // };
             var autor = _mapper.Map<Autor>(autorCreacionDto);
             context.Add(autor);
             //Para guardar los cambios de manera asincrona
             await context.SaveChangesAsync();
-            return Ok();
+
+            var autorDTO = _mapper.Map<AutorDTO>(autor);
+            return CreatedAtRoute("ObtenerAutor", new {id=autor.Id}, autorDTO);
         }
         //se agrega un parametro de ruta por medio de llaves y ponemos que sea un int
         [HttpPut("{id:int}")]// api/autores/1
-        public async Task<ActionResult> Put(Autor autor, int id)
+        public async Task<ActionResult> Put(AutorCreacionDTO autorCreacionDTO, int id)
         {
-            if (autor.Id != id)
+            var existe = await context.Autores.AnyAsync(x => x.Id == id);
+
+            if (!existe)
             {
-                return BadRequest("El id del autor no coincide con el id de la URL");
+                return NotFound();
             }
 
+            var autor = _mapper.Map<Autor>(autorCreacionDTO);
+            autor.Id = id;
+            
             context.Update(autor);
             await context.SaveChangesAsync();
-            return Ok();
+            //return Ok();
+            return NoContent();
         }
 
         [HttpDelete("{id:int}")]
