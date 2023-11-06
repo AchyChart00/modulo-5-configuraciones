@@ -22,9 +22,9 @@ namespace WebApiAutores.Controllers
         [HttpGet("{id:int}", Name = "ObtenerLibro")]
         public async Task<ActionResult<LibroDTOConAutores>> Get(int id)
         {
-            var libros =  await context.Libros.Include(libroBD=>libroBD.Comentarios)
+            var libros = await context.Libros.Include(libroBD => libroBD.Comentarios)
                 .Include(libroDB => libroDB.AutoresLibros)
-                .ThenInclude(autorLibroDB=>autorLibroDB.Autor)
+                .ThenInclude(autorLibroDB => autorLibroDB.Autor)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
             libros.AutoresLibros = libros.AutoresLibros.OrderBy(x => x.Orden).ToList();
@@ -51,6 +51,39 @@ namespace WebApiAutores.Controllers
 
             var libro = _mapper.Map<Libro>(libroCreacionDTO);
 
+            AsignarOrdenAutores(libro);
+
+
+            context.Add(libro);
+            await context.SaveChangesAsync();
+
+            var libroDTO = _mapper.Map<LibroDTO>(libro);
+            return CreatedAtRoute("ObtenerLibro", new { id = libro.Id }, libroDTO);
+
+        }
+
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Put(int id, LibroCreacionDTO libroCreacionDTO)
+        {
+            var libroDB = await context.Libros
+                .Include(x => x.AutoresLibros)
+                .FirstOrDefaultAsync(x => x.Id == id);
+
+            if (libroDB == null)
+            {
+                return NotFound();
+            }
+
+            libroDB = _mapper.Map(libroCreacionDTO, libroDB);
+            AsignarOrdenAutores(libroDB);
+
+            await context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        private void AsignarOrdenAutores(Libro libro)
+        {
             if (libro.AutoresLibros != null)
             {
                 for (int i = 0; i < libro.AutoresLibros.Count; i++)
@@ -58,12 +91,6 @@ namespace WebApiAutores.Controllers
                     libro.AutoresLibros[i].Orden = i;
                 }
             }
-            context.Add(libro);
-            await context.SaveChangesAsync();
-
-            var libroDTO = _mapper.Map<LibroDTO>(libro);
-            return CreatedAtRoute("ObtenerLibro", new {id=libro.Id}, libroDTO);
-
         }
     }
 }
