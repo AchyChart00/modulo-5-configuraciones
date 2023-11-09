@@ -19,7 +19,7 @@ public class AutomapperProfiles:Profile
         CreateMap<Libro, LibroDTO>();
         CreateMap<Libro, LibroDTOConAutores>()
             .ForMember(libroDTO=>libroDTO.Autores, opc=>opc.MapFrom(MapLibroDTOAutores));
-        
+        CreateMap<LibroPatchDTO, Libro>().ReverseMap();
         CreateMap<ComentarioCreacionDTO, Comentario>();
         CreateMap<Comentario, ComentarioDTO>();
     }

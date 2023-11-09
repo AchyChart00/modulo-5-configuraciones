@@ -26,7 +26,7 @@ namespace WebApiAutores
                 })
                 .AddJsonOptions(
                     x=> x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles
-                    );
+                    ).AddNewtonsoftJson();
 
             //Agregamos la configuración de nuestro DBContext
             services.AddDbContext<ApplicationDbContext>(opt=>

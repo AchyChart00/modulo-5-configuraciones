@@ -535,3 +535,7 @@ D:\jacob\Documents\SoftwareProjects\FullStack\CSharp\CShapCurso\CursoAPIRestASPN
 D:\jacob\Documents\SoftwareProjects\FullStack\CSharp\CShapCurso\CursoAPIRestASPNET\modulo-5-web-api-autores-\WebApiAutores\obj\Debug\net6.0\WebApiAutores.pdb
 D:\jacob\Documents\SoftwareProjects\FullStack\CSharp\CShapCurso\CursoAPIRestASPNET\modulo-5-web-api-autores-\WebApiAutores\obj\Debug\net6.0\WebApiAutores.genruntimeconfig.cache
 D:\jacob\Documents\SoftwareProjects\FullStack\CSharp\CShapCurso\CursoAPIRestASPNET\modulo-5-web-api-autores-\WebApiAutores\obj\Debug\net6.0\ref\WebApiAutores.dll
+D:\jacob\Documents\SoftwareProjects\FullStack\CSharp\CShapCurso\CursoAPIRestASPNET\modulo-5-web-api-autores-\WebApiAutores\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\jacob\Documents\SoftwareProjects\FullStack\CSharp\CShapCurso\CursoAPIRestASPNET\modulo-5-web-api-autores-\WebApiAutores\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\jacob\Documents\SoftwareProjects\FullStack\CSharp\CShapCurso\CursoAPIRestASPNET\modulo-5-web-api-autores-\WebApiAutores\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\jacob\Documents\SoftwareProjects\FullStack\CSharp\CShapCurso\CursoAPIRestASPNET\modulo-5-web-api-autores-\WebApiAutores\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
