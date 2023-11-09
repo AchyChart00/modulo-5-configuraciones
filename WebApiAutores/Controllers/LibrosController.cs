@@ -29,6 +29,12 @@ namespace WebApiAutores.Controllers
                 .ThenInclude(autorLibroDB => autorLibroDB.Autor)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
+            if (libros == null)
+            {
+                return NotFound();
+            }
+
+
             libros.AutoresLibros = libros.AutoresLibros.OrderBy(x => x.Orden).ToList();
             return _mapper.Map<LibroDTOConAutores>(libros);
         }
@@ -126,6 +132,20 @@ namespace WebApiAutores.Controllers
             await context.SaveChangesAsync();
 
             return NoContent();
+        }
+
+        [HttpDelete("{id:int}")]//api/autores/2
+        public async Task<ActionResult> Delete(int id)
+        {
+            var existe = await context.Libros.AnyAsync(x => x.Id == id);
+            if (!existe)
+            {
+                return NotFound();
+            }
+
+            context.Remove(new Libro() { Id = id });
+            await context.SaveChangesAsync();
+            return Ok();
         }
     }
 }
