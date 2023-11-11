@@ -15,10 +15,21 @@ namespace WebApiAutores.Controllers
         private readonly ApplicationDbContext context;
         private readonly IMapper _mapper;
 
-        public AutoresController(ApplicationDbContext context, IMapper mapper)
+        public IConfiguration Configuration { get; }
+
+        public AutoresController(ApplicationDbContext context, IMapper mapper, IConfiguration configuration)
         {
             this.context = context;
             _mapper = mapper;
+            Configuration = configuration;
+        }
+
+        [HttpGet("configuraciones")]//Obtener variables del archivo appsettings.json con la clase IConfiguration
+        public ActionResult<string> ObtenerConfiguracion()
+        {
+            //return Configuration["apellido"];
+            //return Configuration["ConnectionStrings:defaultConnection"];
+            return Configuration.GetConnectionString("defaultConnection");
         }
         
         [HttpGet]// api/autores
