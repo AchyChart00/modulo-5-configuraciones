@@ -27,9 +27,9 @@ namespace WebApiAutores.Controllers
         [HttpGet("configuraciones")]//Obtener variables del archivo appsettings.json con la clase IConfiguration
         public ActionResult<string> ObtenerConfiguracion()
         {
-            //return Configuration["apellido"];
+            return Configuration["apellido"];
             //return Configuration["ConnectionStrings:defaultConnection"];
-            return Configuration.GetConnectionString("defaultConnection");
+            //return Configuration.GetConnectionString("defaultConnection");
         }
         
         [HttpGet]// api/autores
